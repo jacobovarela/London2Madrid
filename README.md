@@ -1,5 +1,5 @@
 
-<img src="https://image.flaticon.com/icons/png/512/59/59919.png" style="float: left; margin: 30px; height: 55px">
+<img src="https://image.flaticon.com/icons/png/512/59/59919.png" style="float: left; margin: 10px; height: 10px; width: 10px">
 
 # London to Madrid
 Exploring flight prices and building models to predict them
