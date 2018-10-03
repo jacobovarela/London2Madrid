@@ -17,3 +17,30 @@ The aim of this project is to solve these questions, using the scraped data from
 Questions 1 to 3 can be answered by performing exploratory data analysis, using GroupBy functions as queries, or visualisation software Tableau.
 
 Question 4 on the other hand is a Machine Learning problem, which will be answered by using simple regression models such as Linear, Ridge and Lasso.
+
+---
+
+### Scraping the data
+
+TBD
+
+
+---
+
+### Tableau visualisation
+
+I used Tableau to answer the following questions:
+- Cheapest airport?
+- Cheapest month?
+- Cheapest day of the month?
+- Cheapest day of the week?
+- Cheapest airline?
+- What is a deal?
+
+For more information on the results, please refer to the slides document in this repository.
+
+---
+
+### Modelling
+
+TBD
