@@ -22,8 +22,11 @@ Question 4 on the other hand is a Machine Learning problem, which will be answer
 
 ### Scraping the data
 
-TBD
+I created a script that runs on the terminal, which accepts 2 variables:
+- Airport code (LHR, STN, LGW, etc.)
+- Month (1, 2 ,3, etc.)
 
+The script then goes on to scrape flight information data from each day of a given month, from a given London airport, to Madrid. It uses the 3 APIs that Adioso.com uses, and employs BeautifulSoup to extract information. The script puts together every individual flight into a DataFrame, with its flight number, date, time and price, and it returns a csv file.
 
 ---
 
@@ -43,10 +46,24 @@ For more information on the results, please refer to the slides document in this
 
 ### Modelling
 
-TBD
+I tried out numerous models, but I only included 2 approaches in my final presentation:
+
+1. Predict the price for a specific flight number (for example a morning Iberia flight from LHR) based on features such as the day of the month, day of the week, and other flight prices for the same day.
+  - This approach turned out to be a failure and I could not get a proper positive score using models such as Linear Regression, Lasso, Ridge, Elastic Net, or Random Forest Regressor. The reason for this could be that the feature space was too large and non-correlated to the flight price, which is the target.
+
+
+2. Predict the cheapest price for a given airline in a given day (Air Europa) given the cheapest prices for other airlines.
+  - This approach was a result of noticing that Air Europa does not publish prices beyond 6 months (in contrast with the almost 12 months of other airlines). The goal was to predict how Air Europa would price the following 6 months by building a model that uses just the prices of other airlines.
+  - This time I had more success, and I managed to get a score over 0.6 for Lasso and Ridge regression.
 
 ---
 
 ### Next steps
 
-TBD
+One thing that I did not look into was to cross validate my models (which I thought that was not  possible to do with time series data).
+
+
+As far as evolving the project and diving into more complex modelling, I think it would be interesting to consider ARIMA models and look into seasonal decomposition.
+
+
+Another thing that I would love to do is to scrape past price data and try to explain flight price fluctuation, to understand when is the best time to book a flight in advance.
